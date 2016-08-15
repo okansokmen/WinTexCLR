@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>WinTexCLR</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{57995f86-9050-406c-8977-29fbb9602a08}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>WinTexCLR</RootNamespace>
+    <AssemblyName>WinTexCLR</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetLanguage>VB</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <PermissionSet>EXTERNAL_ACCESS</PermissionSet>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <Trustworthy>True</Trustworthy>
+    <Recovery>SIMPLE</Recovery>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunSqlCodeAnalysis>True</RunSqlCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="General.vb" />
+    <Compile Include="Kumas.vb" />
+    <Compile Include="MTF.vb" />
+    <Compile Include="MTFDinamik.vb" />
+    <Compile Include="Planlama.vb" />
+    <Compile Include="STF.vb" />
+    <Compile Include="StokBakim.vb" />
+    <Compile Include="StokDurumu.vb" />
+    <Compile Include="StokFisValidate.vb" />
+    <Compile Include="StoredProcedures.vb" />
+    <Compile Include="TransferValidate.vb" />
+    <Compile Include="UserDefinedFunctions.vb" />
+    <Compile Include="UTF.vb" />
+    <Compile Include="utilMasterPlan.vb" />
+    <Compile Include="utilSiparis.vb" />
+    <Compile Include="utilSQL.vb" />
+    <Compile Include="utilSQLReadSingleValue.vb" />
+    <Compile Include="utilSQLRW.vb" />
+    <Compile Include="utilSQLTemp.vb" />
+    <Compile Include="utilSysPar.vb" />
+    <Compile Include="Properties\AssemblyInfo.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Local-Jeanci-WinTexCLR.publish.xml" />
+    <None Include="Jeanci-WinTexCLR.publish.xml" />
+    <None Include="ttnc.publish.xml" />
+    <None Include="alders-pubish.publish.xml" />
+    <None Include="Script1.sql" />
+    <None Include="alders-local-publish.publish.xml" />
+    <None Include="WinTexCLR.publish.xml" />
+    <None Include="Jeanci-istwtx.xml" />
+    <None Include="Jeanci-srbwtx.xml" />
+    <None Include="Jeanci-SRB-WinTexCLR.publish.xml" />
+    <None Include="Jeanci-ISTWTX-WinTexCLR.publish.xml" />
+    <None Include="Jeanci-SRBWTX-WinTexCLR.publish.xml" />
+    <None Include="ErogluDeneme.xml" />
+    <None Include="Eroglu8Tes.xml" />
+    <None Include="Eroglu8Misir.xml" />
+    <None Include="Eroglu8MisirFason.xml" />
+    <None Include="Colins-Local-WinTexCLR.publish.xml" />
+    <None Include="Colins-TES2-WinTexCLR.publish.xml" />
+    <None Include="WinTexCLR_1.publish.xml" />
+    <None Include="MISIR-WinTexCLR_1.publish.xml" />
+    <None Include="WinTexCLR_2.publish.xml" />
+    <None Include="MISIRFASON-WinTexCLR_2.publish.xml" />
+    <None Include="TES-WinTexCLR.publish.xml" />
+    <None Include="colins-superserver.publish.xml" />
+    <None Include="WinTexCLR_3.publish.xml" />
+    <None Include="AldersDokuma.publish.xml" />
+    <None Include="AldersJersey.publish.xml" />
+    <None Include="Colins-Local-Eroglu-WinTexCLR.publish.xml" />
+    <None Include="WinTexCLR_4.publish.xml" />
+    <None Include="ColinsYeni-TES-WinTexCLR.publish.xml" />
+    <None Include="Donsa-Local.publish.xml" />
+    <None Include="WinTexCLR_5.publish.xml" />
+    <None Include="Bl-WinTexCLR.publish.xml" />
+    <None Include="OXXO-WinTexCLR.publish.xml" />
+    <None Include="WinTexCLR_6.publish.xml" />
+    <None Include="WinTexCLR_7.publish.xml" />
+    <None Include="WinTexCLR_8.publish.xml" />
+  </ItemGroup>
+</Project>

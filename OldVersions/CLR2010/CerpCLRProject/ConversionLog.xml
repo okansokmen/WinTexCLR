@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='_ConversionReport_Files/ConversionReport.xslt'?>
+<UpgradeLog>
+  <Properties>
+    <Property Name="Project" Value="WinTex" />
+    <Property Name="Project File" Value="D:\okan\CLR2010\CerpCLRProject\WinTex.vbproj" />
+    <Property Name="Date" Value="6 Kasım 2013 Çarşamba" />
+    <Property Name="Time" Value="17:17" />
+  </Properties>
+  <Event ErrorLevel="0" Project="D:\okan\CLR2010\CerpCLRProject\WinTex.vbproj" Source="..\WinTex.vbproj" Description="Project was successfully converted: 'D:\okan\CLR2010\CerpCLRProject\WinTex.vbproj' to 'D:\okan\CLR2010\CerpCLRProject\WinTex.sqlproj'" />
+  <Event ErrorLevel="3" Project="D:\okan\CLR2010\CerpCLRProject\WinTex.vbproj" Source="..\WinTex.vbproj" Description="Converted" />
+</UpgradeLog>
